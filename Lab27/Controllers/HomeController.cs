@@ -32,8 +32,8 @@ namespace Lab27.Controllers
                 string weather = responsedata.ReadToEnd(); // reads the data from the response
                 //TODo: parse the Json data
                 JObject jsonweather = JObject.Parse(weather);
-                //ViewBag.weather = jsonweather["data"]["iconLink"]; // I want icon or pic
-                ViewBag.weather = jsonweather["data"]["text"]; //I want only text, text is under data block so data before text
+                ViewBag.weatherIconLink = jsonweather["data"]["iconLink"]; // I want icon or pic
+                ViewBag.weather = jsonweather["data"]["text"]; //I want only text
                
                 //ViewBag.weatherDate = jsonweather["date"]; // to get the date
 
